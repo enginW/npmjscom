@@ -1,0 +1,32 @@
+// 1. Vendors
+@import
+  'vendors/bootstrap',
+  'vendors/jquery-ui',
+  'vendors/normalize';
+
+// 2. Base stuff
+@import
+  'base/fonts',
+  'base/base';
+ 
+// 3. Configuration and helpers
+@import
+'abstracts/variables',
+'abstracts/mixins';
+
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/navigation',
+  'layout/content',
+  'layout/sidebar',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/button';
+
+// 6. Page-specific styles
+@import
+  'pages/home';

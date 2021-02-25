@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Logo font family
+$logo-font: 'Anton', sans-serif;
+
+/// Body (monospace) font family
+$body-font: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace;
+
+///List font family
+$list-font:'Quicksand', sans-serif;
+
+//Colors
+$header-line: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(255,115,0,1) 15%, rgba(253,33,30,1) 30%, rgba(253,29,29,1) 45%, rgba(193,20,20,1) 70%, rgba(131,58,180,1) 100%);
+$hover-color: #25b1b0;
+$hover-link-color: #fff;
+$light-grey: rgb(237, 237, 237);
+$mid-grey: rgb(153, 153, 153);
+$menu-bg: #262930;
+
+//Comp
+

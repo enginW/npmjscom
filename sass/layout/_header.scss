@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+#head{
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    .header-line{
+        height: 10px;
+        background: $header-line;
+    }
+    .container{
+        .head-menu{
+            margin: 15px 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid grey;
+            .head-menu-left{
+                border: 1px solid blue;
+                margin: 3px 0;
+                display: flex;
+                flex-wrap: nowrap;
+                a{
+                    display: inline-block;
+                    padding:10px;
+                    margin-left: 5px;
+                    font-size: 18px;
+                    font-weight: 300;
+                    white-space: nowrap;
+                    &:first-child{
+                        margin-left: 0;
+                        padding-left: 0;
+                    }
+                }
+            }
+            .head-menu-right{
+                .menu{
+                    width: 100%;
+                    display: flex;
+                    border:1px solid green;
+                    .menu-item{
+                        text-align: right;
+                        margin-right: 15px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                        a{
+                            display: inline-block;
+                            padding: 10px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
