@@ -4,34 +4,40 @@
 #head{
     width: 100%;
     height: auto;
-    border: 1px solid red;
     .header-line{
         height: 10px;
         background: $header-line;
     }
     .container{
         .head-menu{
-            margin: 15px 0;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border: 1px solid grey;
+            font-family: $roboto;
+            font-weight: bold;
+            padding-bottom:2px;
+            padding-top: 2px;
             .head-menu-left{
-                border: 1px solid blue;
                 margin: 3px 0;
                 display: flex;
                 flex-wrap: nowrap;
                 a{
                     display: inline-block;
                     padding:10px;
-                    margin-left: 5px;
-                    font-size: 18px;
+                    margin-left: 2px;
+                    font-size: 16px;
                     font-weight: 300;
                     white-space: nowrap;
+                    color: black;
                     &:first-child{
                         margin-left: 0;
                         padding-left: 0;
+                        cursor: cell;
+                    }
+                    &:hover{
+                        color: rgb(99, 97, 97);
+                        transition: 600ms;
                     }
                 }
             }
@@ -39,22 +45,114 @@
                 .menu{
                     width: 100%;
                     display: flex;
-                    border:1px solid green;
                     .menu-item{
                         text-align: right;
-                        margin-right: 15px;
+                        margin-right: 3px;
                         &:last-child{
                             margin-right: 0;
                         }
                         a{
                             display: inline-block;
                             padding: 10px;
-                            font-size: 18px;
+                            font-weight: 300;
+                            font-size: 16px;
+                            color: black;
+                            font-weight: 500;
+                            &:last-child{
+                                padding-right: 0;
+                            }
+                            &:hover{
+                                color: rgb(99, 97, 97);
+                                transition: 600ms;
+                            }
                         }
                     }
                 }
             }
         }
     }
-    
+    .header-bottom{
+        padding: 15px;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .header-logo{
+                font-family: $search-font;
+                font-size: 30px;
+                a{
+                    color: $black;
+                    display: inline-block;
+                    padding: 5px 10px 5px 0;
+                }
+            }
+            .header-search{
+                flex: 1;
+                position: relative;
+                margin-left: 20px;
+                white-space: nowrap;
+                .fa-search{
+                    font-size: 20px;
+                    position: absolute;
+                    top: 50%;
+                    padding-left: 15px;
+                    transform: translateY(-50%);
+                    color: grey;
+                }
+                .search-bar{
+                    width: 80%;
+                    padding: 15px;
+                    padding-left: 50px;
+                    background-color: $light-grey;
+                    outline: none;
+                    border: .2px solid $light-grey;
+                    letter-spacing: 1px;
+                    &:focus{
+                        border: .2px solid $black;
+                    }
+                }
+                .btn{
+                    position: relative;
+                    top: -1px;
+                    left: -4px;
+                    padding: 15px;
+                    background-color: #231f20;
+                    color: white;
+                    padding-left: 25px;
+                    padding-right: 25px;
+                    font-family: $body-font;
+                    font-weight: 600;
+                    outline: none;
+                    border: 1px solid $black;
+                    cursor: pointer;
+                    &:focus{
+                        border: 2px solid #231f20;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            .header-sign{
+                display: flex;
+                .btn{
+                    padding: 13px;
+                    background-color: white;
+                    font-size: 18px;
+                    font-family: $roboto;
+                    border: none;
+                    &:hover{
+                        opacity: .7;
+                        cursor: pointer;
+                        transition: 600ms;
+                    }
+                    &:first-child{
+                        position: relative;
+                        left: -15px;
+                        border: 1px solid $mid-grey;
+                        margin-right: 15px;
+                        padding: 0 30px;
+                    }
+                }
+            }
+        }
+    }
 }

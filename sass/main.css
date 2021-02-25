@@ -5,8 +5,9 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -717,7 +718,6 @@ li, ul {
 #head {
   width: 100%;
   height: auto;
-  border: 1px solid red;
 }
 
 #head .header-line {
@@ -727,7 +727,6 @@ li, ul {
 }
 
 #head .container .head-menu {
-  margin: 15px 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -738,11 +737,13 @@ li, ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid grey;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  padding-bottom: 2px;
+  padding-top: 2px;
 }
 
 #head .container .head-menu .head-menu-left {
-  border: 1px solid blue;
   margin: 3px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -754,15 +755,23 @@ li, ul {
 #head .container .head-menu .head-menu-left a {
   display: inline-block;
   padding: 10px;
-  margin-left: 5px;
-  font-size: 18px;
+  margin-left: 2px;
+  font-size: 16px;
   font-weight: 300;
   white-space: nowrap;
+  color: black;
 }
 
 #head .container .head-menu .head-menu-left a:first-child {
   margin-left: 0;
   padding-left: 0;
+  cursor: cell;
+}
+
+#head .container .head-menu .head-menu-left a:hover {
+  color: #636161;
+  -webkit-transition: 600ms;
+  transition: 600ms;
 }
 
 #head .container .head-menu .head-menu-right .menu {
@@ -770,12 +779,11 @@ li, ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid green;
 }
 
 #head .container .head-menu .head-menu-right .menu .menu-item {
   text-align: right;
-  margin-right: 15px;
+  margin-right: 3px;
 }
 
 #head .container .head-menu .head-menu-right .menu .menu-item:last-child {
@@ -785,6 +793,129 @@ li, ul {
 #head .container .head-menu .head-menu-right .menu .menu-item a {
   display: inline-block;
   padding: 10px;
+  font-weight: 300;
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+}
+
+#head .container .head-menu .head-menu-right .menu .menu-item a:last-child {
+  padding-right: 0;
+}
+
+#head .container .head-menu .head-menu-right .menu .menu-item a:hover {
+  color: #636161;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+#head .header-bottom {
+  padding: 15px;
+}
+
+#head .header-bottom .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#head .header-bottom .container .header-logo {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 30px;
+}
+
+#head .header-bottom .container .header-logo a {
+  color: #000;
+  display: inline-block;
+  padding: 5px 10px 5px 0;
+}
+
+#head .header-bottom .container .header-search {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+#head .header-bottom .container .header-search .fa-search {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  padding-left: 15px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: grey;
+}
+
+#head .header-bottom .container .header-search .search-bar {
+  width: 80%;
+  padding: 15px;
+  padding-left: 50px;
+  background-color: #ededed;
+  outline: none;
+  border: 0.2px solid #ededed;
+  letter-spacing: 1px;
+}
+
+#head .header-bottom .container .header-search .search-bar:focus {
+  border: 0.2px solid #000;
+}
+
+#head .header-bottom .container .header-search .btn {
+  position: relative;
+  top: -1px;
+  left: -4px;
+  padding: 15px;
+  background-color: #231f20;
+  color: white;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-family: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Monaco", monospace;
+  font-weight: 600;
+  outline: none;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+#head .header-bottom .container .header-search .btn:focus {
+  border: 2px solid #231f20;
+  border-radius: 5px;
+}
+
+#head .header-bottom .container .header-sign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#head .header-bottom .container .header-sign .btn {
+  padding: 13px;
+  background-color: white;
   font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  border: none;
+}
+
+#head .header-bottom .container .header-sign .btn:hover {
+  opacity: .7;
+  cursor: pointer;
+  -webkit-transition: 600ms;
+  transition: 600ms;
+}
+
+#head .header-bottom .container .header-sign .btn:first-child {
+  position: relative;
+  left: -15px;
+  border: 1px solid #999999;
+  margin-right: 15px;
+  padding: 0 30px;
 }
 /*# sourceMappingURL=main.css.map */
