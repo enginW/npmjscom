@@ -1,3 +1,71 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+#main{
+    width: 100%;
+    height: 900px;
+    background: url(/img/npmbg.png);
+    background-size: cover;
+        .main-container{
+            max-width: 780px;
+            margin: 0 auto;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            h1{
+                font-family: $roboto;
+                font-size: 90px;
+                color: #fff;
+                font-weight:500;
+                margin-top: 70px;
+                margin-bottom: 0;
+            }
+            h2{
+                font-family: $roboto;
+                color: white;
+                letter-spacing: 2px;
+                font-size: 40px;
+                width: 70%;
+            }
+            p{
+                padding: 10px;
+                font-family: monospace;
+                width: 70%;
+                color: white;
+                font-size: 17px;
+            }
+        }
+        .btn-group{
+            width: 70%;
+            display: flex;
+            justify-content: space-around;
+            .btn-main{
+                width: 40%;
+                padding: 15px 30px;
+                color: white;
+                font-size: 18px;
+                font-family: monospace;
+                letter-spacing: -0.8px;
+                font-weight: 600;
+                border-radius: 4px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+                &:hover{
+                    filter: blur(.3px);
+                    transform: scale(.98);
+                }
+                &:first-child{
+                    background-color: #c12127;
+                    border-bottom:5px solid #fa8717;
+                }
+                &:last-child{
+                    background-color: #e81aa8;
+                    border-bottom:5px solid #b30ad2;
+                }
+            }
+            padding-top: 10px;
+            padding-bottom: 50px;
+        }
+}

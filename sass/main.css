@@ -823,6 +823,7 @@ li, ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 #head .header-bottom .container .header-logo {
@@ -894,6 +895,7 @@ li, ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  white-space: nowrap;
 }
 
 #head .header-bottom .container .header-sign .btn {
@@ -917,5 +919,118 @@ li, ul {
   border: 1px solid #999999;
   margin-right: 15px;
   padding: 0 30px;
+}
+
+@media (max-width: 1000px) {
+  .header-bottom .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    margin-left: -25px;
+  }
+  .header-bottom .container .header-sign {
+    margin-top: 20px;
+    margin-right: -50px;
+  }
+  .head-menu-right {
+    display: none;
+  }
+}
+
+#main {
+  width: 100%;
+  height: 900px;
+  background: url(/img/npmbg.png);
+  background-size: cover;
+}
+
+#main .main-container {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main .main-container h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 90px;
+  color: #fff;
+  font-weight: 500;
+  margin-top: 70px;
+  margin-bottom: 0;
+}
+
+#main .main-container h2 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 40px;
+  width: 70%;
+}
+
+#main .main-container p {
+  padding: 10px;
+  font-family: monospace;
+  width: 70%;
+  color: white;
+  font-size: 17px;
+}
+
+#main .btn-group {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+
+#main .btn-group .btn-main {
+  width: 40%;
+  padding: 15px 30px;
+  color: white;
+  font-size: 18px;
+  font-family: monospace;
+  letter-spacing: -0.8px;
+  font-weight: 600;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+#main .btn-group .btn-main:hover {
+  -webkit-filter: blur(0.3px);
+          filter: blur(0.3px);
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+#main .btn-group .btn-main:first-child {
+  background-color: #c12127;
+  border-bottom: 5px solid #fa8717;
+}
+
+#main .btn-group .btn-main:last-child {
+  background-color: #e81aa8;
+  border-bottom: 5px solid #b30ad2;
 }
 /*# sourceMappingURL=main.css.map */
