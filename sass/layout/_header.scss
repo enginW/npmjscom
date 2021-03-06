@@ -45,6 +45,33 @@
                 .menu{
                     width: 100%;
                     display: flex;
+                    .dropdown{
+                        position: relative;
+                        &:hover .dropdown-menu{
+                            visibility: visible;
+                            transition: 800ms;
+                        }
+                        .dropdown-menu{
+                            width: 100%;
+                            font-size: 14px;
+                            text-align: start;
+                            right: 10%;
+                            padding: 5px  10px;
+                            position: absolute;
+                            z-index: 1;
+                            border-radius: 5px;
+                            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                            background-color: white;
+                            visibility: hidden;
+                            white-space: nowrap;
+                            .dropdown-menu-item{
+                                &:first-child{
+                                    margin-top: 10px;
+                                }
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
                     .menu-item{
                         text-align: right;
                         margin-right: 3px;
@@ -53,17 +80,32 @@
                         }
                         a{
                             display: inline-block;
-                            padding: 10px;
+                            padding: 10px 3px;
                             font-weight: 300;
                             font-size: 16px;
                             color: black;
                             font-weight: 500;
+                            position: relative;
                             &:last-child{
                                 padding-right: 0;
                             }
                             &:hover{
                                 color: rgb(99, 97, 97);
                                 transition: 600ms;
+                                &::after{
+                                transform: scaleX(1);
+                                transition: 0.3s ease 0s;
+                                }
+                            }
+                            &::after{
+                                content : "";
+                                position: absolute;
+                                bottom: 5px;
+                                width: 100%;
+                                left: 0px;
+                                height: 3px;
+                                background-color: black;
+                                transform: scaleX(0);
                             }
                         }
                     }
@@ -141,10 +183,15 @@
                     font-size: 18px;
                     font-family: $roboto;
                     border: none;
+                    position: relative;
                     &:hover{
                         opacity: .7;
                         cursor: pointer;
                         transition: 600ms;
+                        &::after{
+                            transform: scaleX(1);
+                            transition: 0.3s ease 0s;
+                            }
                     }
                     &:first-child{
                         position: relative;
@@ -152,6 +199,16 @@
                         border: 1px solid $mid-grey;
                         margin-right: 15px;
                         padding: 0 30px;
+                    }
+                    &::after{
+                        content : "";
+                        position: absolute;
+                        bottom: 0px;
+                        width: 100%;
+                        left: 0px;
+                        height: 100%;
+                        border: 1px solid black;
+                        transform: scaleX(0);
                     }
                 }
             }
